@@ -21,30 +21,37 @@ body {
   box-sizing: border-box; }
 
 .navbar {
-  padding: 2rem;
+  margin: 2rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative; }
+  background-color: white;
+  transition: padding 0.6s ease-out 0.2s; }
+  .navbar--sticky {
+    position: sticky;
+    top: 0;
+    padding: 0;
+    background-color: rgba(102, 45, 145, 0.98);
+    color: #fff;
+    box-shadow: 0 1px 10px 1px rgba(102, 45, 145, 0.3);
+    opacity: 0.8;
+    animation: stickyNavbar 0.6s ease-out 0.2s both; }
   .navbar__item {
     padding: 0.5rem 2rem;
     font-size: 2rem;
     text-decoration: none;
     font-weight: 300;
+    text-align: center;
     color: #662d91;
     position: relative;
     transition: color 0.3s; }
     .navbar__item:hover {
-      background-image: linear-gradient(to bottom right, #a68950, #fbf2a2, #b5a273);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      transition: color 0.3s; }
+      color: #50197a; }
     .navbar__item:not(:nth-child(3))::before {
       content: "";
       width: 80%;
       height: 1px;
-      background-image: linear-gradient(to bottom right, #a68950, #fbf2a2, #b5a273);
+      background: #662d91;
       position: absolute;
       bottom: 0;
       left: 50%;
@@ -52,6 +59,18 @@ body {
       transition: transform 0.5s; }
     .navbar__item:hover::before {
       transform: translateX(-50%) scaleX(1); }
+    .navbar__item--sticky {
+      color: #fff;
+      font-size: 1.6rem; }
+      .navbar__item--sticky:hover {
+        color: #fff; }
+      .navbar__item--sticky:nth-child(3) {
+        background: rgba(255, 255, 255, 0.9);
+        padding-bottom: 0; }
+      .navbar__item--sticky:not(:nth-child(3))::before {
+        background: #fff; }
+  .navbar__logo--sticky {
+    width: 80%; }
   .navbar__social-group {
     margin-right: 2rem;
     position: absolute;
@@ -60,11 +79,33 @@ body {
     text-decoration: none;
     margin: 0 0.3rem; }
   .navbar__social-icons {
-    fill: #662d91;
+    fill: #fff;
     height: 3.5rem;
     width: 3.5rem;
     border-radius: 2rem;
     padding: 1rem;
-    background: linear-gradient(to bottom, #a68950, #fbf2a2, #b5a273);
+    background: #662d91;
     position: relative;
-    box-shadow: inset 1px 0px 0 1px #b5a273, inset 0px 1px 0 1px #a68950, inset -1px -1px 0 1px #a68950; }
+    transition: all 0.3s; }
+    .navbar__social-icons:hover {
+      fill: #662d91;
+      background: #fff;
+      box-shadow: 0 0 0 1px #7a46a2; }
+    .navbar__social-icons--sticky {
+      fill: #662d91;
+      background: #fff;
+      margin-bottom: 0.1rem; }
+      .navbar__social-icons--sticky:hover {
+        fill: #fff;
+        background: #662d91;
+        box-shadow: 0 0 0 1px #fff; }
+
+@keyframes stickyNavbar {
+  from {
+    opacity: 0.8;
+    transform: translateY(-100px);
+    padding: 1rem; }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    padding: 0.5rem; } }

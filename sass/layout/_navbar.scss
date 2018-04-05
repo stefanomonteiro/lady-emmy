@@ -1,43 +1,42 @@
 .navbar {
-  padding: 2rem;
+  margin: 2rem 0;
   display: flex;
-
   align-items: center;
   justify-content: center;
-  position: relative;
+  background-color: rgba($color: #fff, $alpha: 1);
+
+  transition: padding 0.6s ease-out 0.2s;
+
+  &--sticky {
+    position: sticky;
+    top: 0;
+    padding: 0;
+    background-color: rgba($color: $color-primary, $alpha: 0.98);
+    color: #fff;
+    box-shadow: 0 1px 10px 1px rgba($color: $color-primary, $alpha: 0.3);
+    opacity: 0.8;
+    animation: stickyNavbar 0.6s ease-out 0.2s both;
+  }
 
   &__item {
     padding: 0.5rem 2rem;
     font-size: 2rem;
     text-decoration: none;
     font-weight: 300;
+    text-align: center;
     color: $color-primary;
     position: relative;
     transition: color 0.3s;
 
     &:hover {
-      background-image: linear-gradient(
-        to bottom right,
-        $color-icons-dark-top,
-        $color-icons-light,
-        $color-icons-dark-bottom
-      );
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      transition: color 0.3s;
+      color: $color-primary-dark;
     }
 
     &:not(:nth-child(3))::before {
       content: "";
       width: 80%;
       height: 1px;
-      background-image: linear-gradient(
-        to bottom right,
-        $color-icons-dark-top,
-        $color-icons-light,
-        $color-icons-dark-bottom
-      );
+      background: $color-primary;
 
       position: absolute;
       bottom: 0;
@@ -46,12 +45,30 @@
       transition: transform 0.5s;
     }
 
-    // &:not(:nth-child(3))::before {
-    //   content: none;
-    // }
-
     &:hover::before {
       transform: translateX(-50%) scaleX(1);
+    }
+
+    &--sticky {
+      color: #fff;
+      font-size: 1.6rem;
+
+      &:hover {
+        color: #fff;
+      }
+      &:nth-child(3) {
+        background: rgba($color: #fff, $alpha: 0.9);
+        padding-bottom: 0;
+      }
+      &:not(:nth-child(3))::before {
+        background: #fff;
+      }
+    }
+  }
+
+  &__logo {
+    &--sticky {
+      width: 80%;
     }
   }
 
@@ -66,29 +83,44 @@
   }
 
   &__social-icons {
-    fill: $color-primary;
+    fill: #fff;
     height: 3.5rem;
     width: 3.5rem;
     border-radius: 2rem;
     padding: 1rem;
-    background: linear-gradient(
-      to bottom,
-      $color-icons-dark-top,
-      $color-icons-light,
-      $color-icons-dark-bottom
-    );
+    background: $color-primary;
     position: relative;
-    box-shadow: inset 1px 0px 0 1px $color-icons-dark-bottom,
-      inset 0px 1px 0 1px $color-icons-dark-top,
-      inset -1px -1px 0 1px $color-icons-dark-top;
-    // border-left: 1px solid $color-icons-light;
-    // border-top: 1px solid $color-icons-light;
-    // border-bottom: 1px solid $color-icons-dark-bottom;
-    // border-right: 1px solid $color-icons-dark-bottom;
+    transition: all 0.3s;
 
-    // border-width: 1px;
-    // border-style: solid;
-    // border-image: linear-gradient(to top, black, rgba(0, 0, 0, 0)) 1 100%;
-    // border-radius: 2rem;
+    &:hover {
+      fill: $color-primary;
+      background: #fff;
+      box-shadow: 0 0 0 1px $color-primary-light;
+    }
+
+    &--sticky {
+      fill: $color-primary;
+      background: #fff;
+      margin-bottom: 0.1rem;
+
+      &:hover {
+        fill: #fff;
+        background: $color-primary;
+        box-shadow: 0 0 0 1px #fff;
+      }
+    }
+  }
+}
+
+@keyframes stickyNavbar {
+  from {
+    opacity: 0.8;
+    transform: translateY(-100px);
+    padding: 1rem;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    padding: 0.5rem;
   }
 }
