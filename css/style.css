@@ -1,0 +1,70 @@
+/* 
+    #662d91 Main Color
+    #d4af37 Text Color
+    #efca7c Social Icons Light
+    #c29e59 Social Icons Dark
+    #fff49d Logo Light
+    #9a7d47 Logo Dark
+*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif; }
+
+body {
+  box-sizing: border-box; }
+
+.navbar {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; }
+  .navbar__item {
+    padding: 0.5rem 2rem;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 300;
+    color: #662d91;
+    position: relative;
+    transition: color 0.3s; }
+    .navbar__item:hover {
+      background-image: linear-gradient(to bottom right, #a68950, #fbf2a2, #b5a273);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      transition: color 0.3s; }
+    .navbar__item:not(:nth-child(3))::before {
+      content: "";
+      width: 80%;
+      height: 1px;
+      background-image: linear-gradient(to bottom right, #a68950, #fbf2a2, #b5a273);
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%) scaleX(0);
+      transition: transform 0.5s; }
+    .navbar__item:hover::before {
+      transform: translateX(-50%) scaleX(1); }
+  .navbar__social-group {
+    margin-right: 2rem;
+    position: absolute;
+    right: 0; }
+  .navbar__social-links {
+    text-decoration: none;
+    margin: 0 0.3rem; }
+  .navbar__social-icons {
+    fill: #662d91;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 2rem;
+    padding: 1rem;
+    background: linear-gradient(to bottom, #a68950, #fbf2a2, #b5a273);
+    position: relative;
+    box-shadow: inset 1px 0px 0 1px #b5a273, inset 0px 1px 0 1px #a68950, inset -1px -1px 0 1px #a68950; }
