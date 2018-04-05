@@ -1,19 +1,30 @@
 .navbar {
-  padding: 2rem;
+  margin: 2rem 0;
   display: flex;
 
   align-items: center;
   justify-content: center;
-  position: relative;
+  // position: sticky;
+  // top: 0;
+  transition: all 0.3s;
+
+  &--sticky {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    padding: 0;
+    box-shadow: 0 3px 10px 1px rgba($color: $color-primary, $alpha: 0.3);
+  }
 
   &__item {
     padding: 0.5rem 2rem;
     font-size: 2rem;
     text-decoration: none;
     font-weight: 300;
+    text-align: center;
     color: $color-primary;
     position: relative;
-    transition: color 0.3s;
+    transition: all 0.3s;
 
     &:hover {
       background-image: linear-gradient(
@@ -40,18 +51,27 @@
       );
 
       position: absolute;
-      bottom: 0;
+      bottom: -0.3rem;
       left: 50%;
       transform: translateX(-50%) scaleX(0);
       transition: transform 0.5s;
     }
 
-    // &:not(:nth-child(3))::before {
-    //   content: none;
-    // }
-
     &:hover::before {
       transform: translateX(-50%) scaleX(1);
+    }
+
+    &--sticky {
+      font-size: 1.6rem;
+      padding-bottom: 0;
+    }
+  }
+
+  &__logo {
+    transition: all 0.3s;
+
+    &--sticky {
+      transform: scale(0.8);
     }
   }
 
