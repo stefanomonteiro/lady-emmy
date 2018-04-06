@@ -29,7 +29,7 @@ body {
   .navbar--sticky {
     position: sticky;
     top: 0;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.99);
     padding: 0;
     box-shadow: 0 3px 10px 1px rgba(102, 45, 145, 0.3); }
   .navbar__item {
@@ -47,6 +47,8 @@ body {
       background-clip: text;
       color: transparent;
       transition: color 0.3s; }
+    .navbar__item:first-child {
+      margin-left: auto; }
     .navbar__item:not(:nth-child(3))::before {
       content: "";
       width: 80%;
@@ -67,9 +69,8 @@ body {
     .navbar__logo--sticky {
       transform: scale(0.8); }
   .navbar__social-group {
-    margin-right: 2rem;
-    position: absolute;
-    right: 0; }
+    margin-right: 4rem;
+    margin-left: auto; }
   .navbar__social-links {
     text-decoration: none;
     margin: 0 0.3rem; }
@@ -81,4 +82,8 @@ body {
     padding: 1rem;
     background: linear-gradient(to bottom, #a68950, #fbf2a2, #b5a273);
     position: relative;
-    box-shadow: inset 1px 0px 0 1px #b5a273, inset 0px 1px 0 1px #a68950, inset -1px -1px 0 1px #a68950; }
+    box-shadow: inset 1px 0px 0 1px #b5a273, inset 0px 1px 0 1px #a68950, inset -1px -1px 0 1px #a68950;
+    transition: all 0.3s; }
+    .navbar__social-icons--sticky {
+      height: 3.3rem;
+      width: 3.3rem; }

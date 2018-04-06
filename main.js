@@ -27,16 +27,6 @@ document.addEventListener("scroll", function(e) {
       element.classList.remove("navbar__social-icons--sticky");
     });
   }
-  if (scrollpos > oldScrollpos) {
-    navbar.classList.remove("navbar--sticky");
-    navbarLogo.classList.remove("navbar__logo--sticky");
-    navbarItem.forEach(element => {
-      element.classList.remove("navbar__item--sticky");
-    });
-    navbarSocialIcons.forEach(element => {
-      element.classList.remove("navbar__social-icons--sticky");
-    });
-  }
 
   //   console.log("Old: " + oldScrollpos + " | scrollpos: " + scrollpos);
 });

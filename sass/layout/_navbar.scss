@@ -11,7 +11,7 @@
   &--sticky {
     position: sticky;
     top: 0;
-    background: #fff;
+    background: rgba($color: #fff, $alpha: 0.99);
     padding: 0;
     box-shadow: 0 3px 10px 1px rgba($color: $color-primary, $alpha: 0.3);
   }
@@ -37,6 +37,10 @@
       background-clip: text;
       color: transparent;
       transition: color 0.3s;
+    }
+
+    &:first-child {
+      margin-left: auto;
     }
 
     &:not(:nth-child(3))::before {
@@ -76,9 +80,8 @@
   }
 
   &__social-group {
-    margin-right: 2rem;
-    position: absolute;
-    right: 0;
+    margin-right: 4rem;
+    margin-left: auto;
   }
   &__social-links {
     text-decoration: none;
@@ -101,14 +104,12 @@
     box-shadow: inset 1px 0px 0 1px $color-icons-dark-bottom,
       inset 0px 1px 0 1px $color-icons-dark-top,
       inset -1px -1px 0 1px $color-icons-dark-top;
-    // border-left: 1px solid $color-icons-light;
-    // border-top: 1px solid $color-icons-light;
-    // border-bottom: 1px solid $color-icons-dark-bottom;
-    // border-right: 1px solid $color-icons-dark-bottom;
 
-    // border-width: 1px;
-    // border-style: solid;
-    // border-image: linear-gradient(to top, black, rgba(0, 0, 0, 0)) 1 100%;
-    // border-radius: 2rem;
+    transition: all 0.3s;
+
+    &--sticky {
+      height: 3.3rem;
+      width: 3.3rem;
+    }
   }
 }
