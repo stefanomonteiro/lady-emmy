@@ -1,0 +1,928 @@
+/* TABLE OF CONTENTS
+1.0 STYLING REMINDERS
+    1.1 DOCUMENT COLORS
+    1.2 FONTS
+2.0 DOCUMENT SETUP INITIALIZATION
+    2.1 GENERAL
+    2.2 CLEARFIX
+    2.3 BUTTONS
+    2.4 LINKS
+3.0 NAVIGATION STYLING
+4.0 HEADER STYLING
+5.0 SECTIONS STYLING
+6.0 FOOTER STYLING
+7.0 MEDIA QUERIES
+
+/* 1.0 STYLING REMINDERS----------------------------- */
+
+/* 1.1 DOCUMENT COLORS:::
+Lady Emmy Purple:  #55348D   rgba(85, 52, 141, 1);
+Lady Emmy Gold:   #D8BE84   rgba(216, 191, 132, 1);
+Pretty Beautique Pink: #e90b8c    rgba(233, 11, 141, 1);
+1.2 FONTS:::*/
+@font-face {
+    font-family: 'sourceSansRegular';
+    src: url('../fonts/SourceSansPro-Regular.otf');
+}
+@font-face {
+    font-family: 'headlineFont';
+    src: url('../fonts/YaquoteScript_PersonalUse.ttf');
+}
+@font-face {
+    font-family: 'timesRegularFont';
+    src: url('../fonts/times.ttf');
+}
+@font-face {
+    font-family: 'ralewayLightFont';
+    src: url('../fonts/raleway-Light.ttf');
+}
+
+@font-face {
+    font-family: 'ralewayMediumFont';
+    src: url('../fonts/Raleway-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'proximaNova';
+    src: url('../fonts/SourceSansPro-ExtraLight.otf');
+}
+
+
+
+/*
+/* 2.0 DOCUMENT SETUP INITIALIZATION ----------------------------- */
+
+/* 2.1 GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    box-sizing: border-box;
+    /*background: url(img/);*/
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+main,
+nav,
+section,
+summary,
+div {
+    margin: 0;
+}
+
+#site-container {
+    max-width: 1440px;
+    margin: auto;
+    background-color: white;
+}
+
+a:hover {
+    color: color: rgba(85, 52, 141, 1);
+}
+
+a:visited {
+    color: rgba(85, 52, 141, 1);
+}
+
+a:active {
+    color: rgba(85, 52, 141, 1);
+}
+
+ul li a {
+    font-family: 'sourceSansRegular', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: rgba(85, 52, 141, 1);
+}
+
+ul li a:link,
+ul li a:visited {
+    color: rgba(85, 52, 141, 0.7);
+}
+
+h1 {
+    display: none;
+    /*for outlining and screen reading purposes*/
+}
+
+.headerImage {
+    position: absolute;
+}
+h2 {
+    font-family: 'headlineFont';
+    font-size: 8vw;
+    font-weight: lighter;
+    color: rgba(85, 52, 141, 1);
+    position: relative;
+    padding: 10vw 0 0 -2vw;
+}
+h3 {
+    font-family: 'timesRegularFont';
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-family: 'ralewayLightFont';
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+h5 {
+    font-family: 'ralewayMediumFont';
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    color: rgba(85, 52, 141, 1);
+}
+
+h6 {
+    font-family: 'timesRegularFont';
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    color: black;
+}
+
+p {
+    font-family: 'proximaNova';
+    font-size: 1rem;
+}
+
+/* 2.2 CLEARFIX */
+.clearfix::after {
+    content: ' ';
+    clear: both;
+    display: block;
+}
+
+/* 2.3 BUTTON STYLING */
+.purple-button {
+    display: block;
+    margin: auto;
+    padding: 9px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'ralewayLightFont';
+    text-transform: uppercase;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    -moz-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.purple-button-appearance {
+    background-color: rgba(85, 52, 141, 1);
+    color: white;
+}
+
+.purple-button-appearance:hover {
+    background-color:rgba(85, 52, 141, 0.75);
+}
+
+.pink-button {
+    display: block;
+    margin: auto;
+    padding: 9px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'ralewayLightFont';
+    text-transform: uppercase;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.pink-button a {
+    color: white;
+}
+
+.pink-button-appearance {
+    background-color: rgba(233, 11, 141, 1);
+    color: white;
+}
+
+.pink-button-appearance:hover {
+    background-color: rgba(233, 11, 141, 0.5);
+}
+
+.gold-button {
+    background: linear-gradient(top, #C3A36B 5%, #FFF0B4 20%, #FFECAD 50%,  #A8894D 100%);
+    background: -moz-linear-gradient(top, #C3A36B 5%, #FFF0B4 20%, #FFECAD 50%,  #A8894D 100%);
+    background: -o-linear-gradient(top, #C3A36B 5%, #FFF0B4 20%, #FFECAD 50%,  #A8894D 100%);
+    background: -webkit-linear-gradient(top, #C3A36B 5%, #FFF0B4 20%, #FFECAD 50%,  #A8894D 100%);
+    padding: 10px;
+    color: rgba(85, 52, 141, 1);
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-family: 'ralewayLightFont';
+    font-weight: bold;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.gold-button:hover {
+    background: linear-gradient(-45deg, #C3A36B 5%, #FFF0B4 20%, #FFECAD 50%,  #A8894D 100%);
+    background: -moz-linear-gradient(-45deg, #C3A36B 5%, #FFF0B4 20%, #FFECAD 50%,  #A8894D 100%);
+    background: -webkit-linear-gradient(-45deg, #C3A36B 5%, #FFF0B4 20%, #FFECAD 50%,  #A8894D 100%);
+    background: -o-linear-gradient(-45deg, #C3A36B 5%, #FFF0B4 20%, #FFECAD 50%,  #A8894D 100%);
+
+}
+
+/* 2.4 LINK ATTRIBUTES */
+a {
+    text-decoration: none;
+}
+
+a:link,
+a:visited {
+    color: #;
+}
+
+a:hover,
+a:active {
+    color: #;
+}
+
+
+
+/* Current Page Nav Decoration*/
+#activeNav {
+    color: #;
+}
+
+/* Paragraph link hover background color
+https://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_hover_more */
+/*
+p a:link {
+    color: black;
+    border-bottom: 3px solid #bc1919;
+}
+
+p a:hover,
+p a:active {
+    color: white;
+    background-color: rgb(187, 25, 25);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.menuContainer p a:link {
+    color: white;
+}
+
+/*
+3.0 NAVIGATION STYLING */
+nav {
+    position: relative;
+}
+
+nav ul {
+    text-align: center;
+}
+nav ul li {
+    list-style-type: none;
+    display: inline;
+    padding: 0 40px;
+}
+
+nav ul li img {
+    width: 150px;
+    padding-top: 9px;
+}
+
+.nav-top_social {
+    position: absolute;
+    z-index: 999;
+    top: 10px;
+    right: -64%;
+}
+
+.nav-top_social a img{
+    width: 3.5%;
+}
+
+/*
+Menu underline effect  http://tobiasahlin.com/blog/css-trick-animating-link-underlines/  */
+ul li a {
+    position: relative;
+}
+ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background-color: rgba(85, 52, 141, 100);
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+ul li a:hover::before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+/* 4.0 HEADER STYLING */
+.ms-container {
+    padding-top: 75px;
+}
+
+.ms-caption {
+    font-family: 'headlineFont';
+}
+
+/*
+.headerImage {
+    width: 100%;
+    margin-top: 50px;
+}*/
+
+.expert {
+    position: relative;
+    width: 20%;
+}
+
+/*  5.0 SECTIONS STYLING  */
+
+
+.stay-updated {
+    padding: 15px 0;
+}
+
+.stay-updated_div:last-child {
+    padding-top: 13px;
+}
+
+.stay-updated h5, .stay-updated p {
+    text-align: center;
+}
+
+input[type=text] {
+    display: block;
+    margin: 0 auto 15px auto;
+    font-size: 1rem;
+    font-family: 'ralewayLightFont';
+    text-transform: uppercase;
+    width: 60%;
+    box-sizing: border-box;
+    border: 1px solid rgba(85, 52, 141, 0.25);
+    border-radius: 2px;
+    font-size: 1rem;
+    background-color: white;
+    padding: 9px 25px;
+    /*-webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;*/
+}
+/*input[type=text]:focus {
+    width: 100%;
+}
+*/
+.ny-background {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.who-is_parent-container {
+    position: relative;
+}
+
+.who-is_child-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    bottom: 20px;
+    right: 20px;
+}
+
+.who-is_image {
+    width: 385px;
+    display: block;
+    margin: auto;
+}
+
+.image-border {
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding: 12px;
+    outline: 1.5px solid #d5d5d5;
+    outline-offset: -12px;
+    background-color: white;
+}
+
+.who-is-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.who-is-flex h3 {
+    color: #B39A5A;
+    text-align: center;
+}
+
+.who-is-flex img {
+    width: 35%;
+}
+
+.who-is-flex_text {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
+.gallery-whats-new-flex {
+    width: 80%;
+    margin: auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.card:last-child {
+    margin-right: 0;
+}
+
+.card h6 {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.card img, .card button {
+    display: block;
+    margin: auto;
+}
+
+.card_button {
+    padding: 10px;
+}
+
+.gallery_image {
+    width: 100%;
+}
+
+.what-people-saying {
+    position: relative;
+}
+.what-people-saying_left {
+    margin: 5%;
+}
+.what-people-saying h6 {
+    text-align: center;
+}
+
+.what-people-saying p:nth-of-type(1) {
+    margin-top: 15px;
+}
+.what-people-saying p:nth-of-type(2) {
+    color: rgba(216, 191, 132, 1);
+    margin-top: 2%;
+}
+
+.what-people-are-saying_quote-block {
+    text-align: center;
+}
+
+.quotation-left, .quotation-right {
+    width: 25%;
+}
+
+.quotation-left {
+    position: absolute;
+    top: 40px;
+    left: 2px;
+}
+
+.quotation-right {
+    position: absolute;
+    top: 155px;
+    left: 224px;
+    -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+
+.what-people-saying_right img {
+    width: 66%;
+    padding-bottom: -10px;
+    display: block;
+    margin: auto;
+}
+
+.pretty-beautique-banner {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background: rgba(161,132,77,1);
+    background: -moz-linear-gradient(-45deg, rgba(161,132,77,1) 0%, rgba(250,218,158,1) 37%, rgba(255,240,181,1) 52%, rgba(235,205,146,1) 72%, rgba(161,132,77,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(161,132,77,1)), color-stop(37%, rgba(250,218,158,1)), color-stop(52%, rgba(255,240,181,1)), color-stop(72%, rgba(235,205,146,1)), color-stop(100%, rgba(161,132,77,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(161,132,77,1) 0%, rgba(250,218,158,1) 37%, rgba(255,240,181,1) 52%, rgba(235,205,146,1) 72%, rgba(161,132,77,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(161,132,77,1) 0%, rgba(250,218,158,1) 37%, rgba(255,240,181,1) 52%, rgba(235,205,146,1) 72%, rgba(161,132,77,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(161,132,77,1) 0%, rgba(250,218,158,1) 37%, rgba(255,240,181,1) 52%, rgba(235,205,146,1) 72%, rgba(161,132,77,1) 100%);
+    background: linear-gradient(135deg, rgba(161,132,77,1) 0%, rgba(250,218,158,1) 37%, rgba(255,240,181,1) 52%, rgba(235,205,146,1) 72%, rgba(161,132,77,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1844d', endColorstr='#a1844d', GradientType=1 );
+}
+
+.pretty-beautique-banner {
+    padding: 4%;
+}
+
+.pretty-beautique-banner span {
+    font-weight: bold;
+}
+
+.pb-left h4, button{
+    padding-bottom: 4%;
+}
+
+.pb-middle img {
+    width: 75%;
+    padding: 5% 0;
+}
+
+.pb-right img {
+    width: 40%;
+}
+
+.pb-right a {
+    color: rgba(233, 11, 141, 1);
+    font-family: 'proximaNova';
+    font-weight: bold;
+    font-size: 1rem;
+    display: block;
+    margin-top: 2%;
+}
+
+.get-social-with {
+    padding: 4%;
+    text-align: center;
+}
+
+.get-social-with img {
+    display: block;
+    margin: auto;
+    width: 63%;
+    padding-top: 2%;
+}
+
+.gallery-whats-new {
+    position: relative;
+}
+
+.gallery-whats-new_container {
+    width: 100%;
+    position: absolute;
+    margin: -325px 0 0 0;
+}
+
+
+/* 6.0 FOOTER STYLING */
+.hide {
+    display: none;
+}
+
+.show {
+    display: inline;
+}
+
+.footer-top, .footer-middle {
+    padding: 10px;
+}
+
+.footer-top {
+    background-color: white;
+}
+
+.footer-top_logo, .footer-top_social {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.footer-top_social img {
+    width: 13%;
+}
+
+.footer-middle {
+    background-color: rgba(85, 52, 141, 1);
+}
+
+.footer-middle, .footer-middle nav ul li a {
+    color: white;
+}
+
+.footer-middle nav ul li {
+    display: block;
+    padding: 5px;
+}
+
+.footer-middle p {
+    text-align: center;
+    padding: 5px;
+    font-size: 0.7rem;
+}
+
+.footer-middle nav ul li a:hover {
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.footer-bottom img {
+    height: 150px;
+}
+/*
+footer {
+    position: relative;
+}*
+.footer-top_floating {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+}
+
+/*7.0 MEDIA QUERIES*/
+@media (min-width: 412px) {
+    .quotation-right {
+        top: 132px;
+        left: 294px;
+    }
+    .what-people-saying p:nth-of-type(1) {
+        margin-top: 23px;
+    }
+    .get-social-with img {
+        width: 45%;
+    }
+
+}
+
+@media (min-width: 575px) {
+    .what-people-saying_right {
+        margin-top: 86px;
+    }
+    .gallery-whats-new {
+        height: 600px;
+    }
+    .gallery-whats-new-flex {
+        display: flex;
+    }
+    .whats-new_ny-background {
+        height: 400px;
+    }
+    .gallery-whats-new_container {
+        margin: -391px 0 0 0;
+    }
+    .card {
+        flex: 1;
+        padding: 20px;
+        margin-right: 8%;
+    }
+}
+
+
+@media (min-width: 768px) {  /* iPAD */
+    .ms-container {
+        padding-top: 11px;
+    }
+    .headerImage {
+        margin-top: 0px;
+    }
+    h2 {
+        font-size: 4rem;
+    }
+    .who-is {
+        position: relative;
+    }
+    .who-is p {
+        font-size: 0.9rem;
+        padding: 9px;
+    }
+    .who-is_parent-container:nth-of-type(2) img {
+        display: none;
+    }
+    .who-is_parent-container:nth-of-type(2) {
+        position: absolute;
+        width: 400px;
+        top: 39px;
+        margin: auto 20% auto 50%;
+    }
+    .who-is_image {
+        margin: auto 80% auto 19%;
+    }
+    .stay-updated {
+        padding: 22px 0;
+    }
+    .stay-updated_div {
+        width: 40%;
+        float: left;
+    }
+    .stay-updated_div:nth-child(1) {
+        margin-left: 10%;}
+    .stay-updated_div:nth-child(2) {
+        margin-right: 10%;
+        padding-top: 0;
+    }
+    input[type=text] {
+        display: inline;
+        margin: 0 auto;
+    }
+    .purple-button {
+        display: inline;
+    }
+    .what-people-saying_left,
+    .what-people-saying_right {
+        float: left;
+        width: 32%;
+    }
+    .what-people-saying_left {
+        margin-left: 20%;
+        margin-top: 34px;
+    }
+    .what-people-saying_right {
+        margin-left: 5%;
+        margin-top: 0;
+    }
+    .what-people-saying h6,
+    .what-people-are-saying_quote-block {
+        text-align: left;
+    }
+    .quotation-left, .quotation-right {
+        width: 10%;
+    }
+    .quotation-left {
+        top: 87px;
+        left: 16%;
+    }
+    .quotation-right {
+        top: 200px;
+        left: 45%;
+    }
+    .what-people-saying p:nth-of-type(1) {
+        margin-top: 20%;
+    }
+    .what-people-saying p:nth-of-type(2) {
+        color: rgba(216, 191, 132, 1);
+        margin-top: 4%;
+    }
+    .what-people-saying_right img {
+        width: 90%;
+    }
+    .pretty-beautique-banner {
+        padding: 2%;
+    }
+    .pb-left {
+        padding-top: 2.5%;
+    }
+    .pb-middle img {
+        width: 66%;
+    }
+    .pb-right{
+        padding-top: 2.5%;
+    }
+    .pb-right img {
+        width: 53%;
+    }
+    .pb-left, .pb-middle, .pb-right {
+      width: calc(100% / 3);
+      float: left;
+    }
+    .footer-top_logo {
+        float: left;
+        width: 49%;
+        padding-left: 25%;
+    }
+    .footer-top_social {
+        float: left;
+        width: 23%;
+        padding-top: 16px;
+    }
+    .footer-top_logo img {
+        width: 60%;
+    }
+    .footer-top_social img {
+        width: 9%;
+    }
+    .footer-middle {
+        float: clear;
+        padding: 3%;
+    }
+    .footer-middle nav ul {
+        padding-bottom: 20px;
+    }
+    .footer-middle nav ul li {
+        display: inline;
+        border-right: 0.5px solid white;
+        padding: 0 25px;
+    }
+    .footer-middle nav ul li:last-child {
+        padding-right: 0;
+        border-right: 0;
+    }
+    .footer-middle nav ul li a {
+        font-size: .9rem;
+    }
+    .footer-middle p {
+        padding-top: 20px;
+        font-size: .7rem;
+        border-top: 0.5px solid #C5AD66;
+    }
+    .get-social-with img {
+        width: 18%;
+    }
+    .facebook-feed, .instagram-feed, .twitter-feed {
+        float: left;
+        width: calc(100% / 3);
+    }
+    .facebook-feed img, .instagram-feed img, .twitter-feed img {
+        width: 94%;
+    }
+
+}
+
+@media (min-width: 956px) {
+    .who-is_parent-container:nth-of-type(2) {
+        margin: auto auto auto 48%;
+    }
+    .who-is_image {
+    margin: auto auto auto 27%;
+    }
+    .ny-background {
+        object-position: -20% 84%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .who-is_parent-container:nth-of-type(2) {
+        margin: auto auto auto 48%;
+    }
+}
+
+@media (min-width: 1500px) {
+    .quotation-left {
+        top: 89px;
+    }
+    .quotation-right {
+        top: 200px;
+    }
+    .pb-left {
+        padding-top: 3.5%;
+    }
+    .get-social-with {
+        display: block;
+        margin: auto;
+        max-width: 90%;
+    }
+    .get-social-with img {
+        width: 18%;
+    }
+    .facebook-feed img, .instagram-feed img, .twitter-feed img {
+        width: 94%;
+    }
+}
