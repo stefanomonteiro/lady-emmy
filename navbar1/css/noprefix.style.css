@@ -49,7 +49,7 @@ body {
       transition: color 0.3s; }
     .navbar__item:first-child {
       margin-left: auto; }
-    .navbar__item:nth-child(5) {
+    .navbar__item:last-child {
       margin-right: 10rem; }
     .navbar__item:not(:nth-child(3))::before {
       content: "";
@@ -63,8 +63,13 @@ body {
       transition: transform 0.5s; }
     .navbar__item:hover::before {
       transform: translateX(-50%) scaleX(1); }
+    .navbar__item--sticky {
+      font-size: 1.6rem;
+      padding-bottom: 0; }
   .navbar__logo {
     transition: all 0.3s; }
+    .navbar__logo--sticky {
+      transform: scale(0.8); }
   .navbar__social-group {
     margin-right: 4rem; }
   .navbar__social-links {
@@ -76,12 +81,10 @@ body {
     width: 3.5rem;
     border-radius: 2rem;
     padding: 1rem;
-    background: linear-gradient(to bottom right, #a68950, #fbf2a2, #b5a273);
+    background: linear-gradient(to bottom, #a68950, #fbf2a2, #b5a273);
     position: relative;
     box-shadow: inset 1px 0px 0 1px #b5a273, inset 0px 1px 0 1px #a68950, inset -1px -1px 0 1px #a68950;
     transition: all 0.3s; }
-    .navbar__social-icons:hover {
-      fill: white;
-      box-shadow: inset 1px 0px 0 1px #d8ceb6, inset 0px 1px 0 1px #cab792, inset -1px -1px 0 1px #cab792; }
-    .navbar__social-icons:active {
-      transform: scale(0.95); }
+    .navbar__social-icons--sticky {
+      height: 3.3rem;
+      width: 3.3rem; }
