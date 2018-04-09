@@ -1,0 +1,111 @@
+/* 
+    #662d91 Main Color
+    #d4af37 Text Color
+    #efca7c Social Icons Light
+    #c29e59 Social Icons Dark
+    #fff49d Logo Light
+    #9a7d47 Logo Dark
+*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif; }
+
+body {
+  box-sizing: border-box; }
+
+.navbar {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  transition: padding 0.6s ease-out 0.2s; }
+  .navbar--sticky {
+    position: sticky;
+    top: 0;
+    padding: 0;
+    background-color: rgba(102, 45, 145, 0.98);
+    color: #fff;
+    box-shadow: 0 1px 10px 1px rgba(102, 45, 145, 0.3);
+    opacity: 0.8;
+    animation: stickyNavbar 0.6s ease-out 0.2s both; }
+  .navbar__item {
+    padding: 0.5rem 2rem;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 300;
+    text-align: center;
+    color: #662d91;
+    position: relative;
+    transition: color 0.3s; }
+    .navbar__item:hover {
+      color: #50197a; }
+    .navbar__item:not(:nth-child(3))::before {
+      content: "";
+      width: 80%;
+      height: 1px;
+      background: #662d91;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%) scaleX(0);
+      transition: transform 0.5s; }
+    .navbar__item:hover::before {
+      transform: translateX(-50%) scaleX(1); }
+    .navbar__item--sticky {
+      color: #fff;
+      font-size: 1.6rem; }
+      .navbar__item--sticky:hover {
+        color: #fff; }
+      .navbar__item--sticky:nth-child(3) {
+        background: rgba(255, 255, 255, 0.9);
+        padding-bottom: 0; }
+      .navbar__item--sticky:not(:nth-child(3))::before {
+        background: #fff; }
+  .navbar__logo--sticky {
+    width: 80%; }
+  .navbar__social-group {
+    margin-right: 2rem;
+    position: absolute;
+    right: 0; }
+  .navbar__social-links {
+    text-decoration: none;
+    margin: 0 0.3rem; }
+  .navbar__social-icons {
+    fill: #fff;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 2rem;
+    padding: 1rem;
+    background: #662d91;
+    position: relative;
+    transition: all 0.3s; }
+    .navbar__social-icons:hover {
+      fill: #662d91;
+      background: #fff;
+      box-shadow: 0 0 0 1px #7a46a2; }
+    .navbar__social-icons--sticky {
+      fill: #662d91;
+      background: #fff;
+      margin-bottom: 0.1rem; }
+      .navbar__social-icons--sticky:hover {
+        fill: #fff;
+        background: #662d91;
+        box-shadow: 0 0 0 1px #fff; }
+
+@keyframes stickyNavbar {
+  from {
+    opacity: 0.8;
+    transform: translateY(-100px);
+    padding: 1rem; }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    padding: 0.5rem; } }

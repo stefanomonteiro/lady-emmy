@@ -1,0 +1,126 @@
+.navbar {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($color: #fff, $alpha: 1);
+
+  transition: padding 0.6s ease-out 0.2s;
+
+  &--sticky {
+    position: sticky;
+    top: 0;
+    padding: 0;
+    background-color: rgba($color: $color-primary, $alpha: 0.98);
+    color: #fff;
+    box-shadow: 0 1px 10px 1px rgba($color: $color-primary, $alpha: 0.3);
+    opacity: 0.8;
+    animation: stickyNavbar 0.6s ease-out 0.2s both;
+  }
+
+  &__item {
+    padding: 0.5rem 2rem;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 300;
+    text-align: center;
+    color: $color-primary;
+    position: relative;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $color-primary-dark;
+    }
+
+    &:not(:nth-child(3))::before {
+      content: "";
+      width: 80%;
+      height: 1px;
+      background: $color-primary;
+
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%) scaleX(0);
+      transition: transform 0.5s;
+    }
+
+    &:hover::before {
+      transform: translateX(-50%) scaleX(1);
+    }
+
+    &--sticky {
+      color: #fff;
+      font-size: 1.6rem;
+
+      &:hover {
+        color: #fff;
+      }
+      &:nth-child(3) {
+        background: rgba($color: #fff, $alpha: 0.9);
+        padding-bottom: 0;
+      }
+      &:not(:nth-child(3))::before {
+        background: #fff;
+      }
+    }
+  }
+
+  &__logo {
+    &--sticky {
+      width: 80%;
+    }
+  }
+
+  &__social-group {
+    margin-right: 2rem;
+    position: absolute;
+    right: 0;
+  }
+  &__social-links {
+    text-decoration: none;
+    margin: 0 0.3rem;
+  }
+
+  &__social-icons {
+    fill: #fff;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 2rem;
+    padding: 1rem;
+    background: $color-primary;
+    position: relative;
+    transition: all 0.3s;
+
+    &:hover {
+      fill: $color-primary;
+      background: #fff;
+      box-shadow: 0 0 0 1px $color-primary-light;
+    }
+
+    &--sticky {
+      fill: $color-primary;
+      background: #fff;
+      margin-bottom: 0.1rem;
+
+      &:hover {
+        fill: #fff;
+        background: $color-primary;
+        box-shadow: 0 0 0 1px #fff;
+      }
+    }
+  }
+}
+
+@keyframes stickyNavbar {
+  from {
+    opacity: 0.8;
+    transform: translateY(-100px);
+    padding: 1rem;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    padding: 0.5rem;
+  }
+}
