@@ -1,0 +1,85 @@
+.whois {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-extra-light, 0.6),
+      rgba($color-primary, 0.6),
+      rgba($color-primary-extra-dark, 0.6)
+    ),
+    url(../../img/background-nyc.jpg);
+  // height: 60rem;
+  background-size: cover;
+  background-position: bottom;
+
+  &__figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image {
+    // max-width: 90%;
+    // max-height: 80%;
+    &-container {
+      flex: 0 0 35%;
+      padding: 4rem 8rem 4rem 0;
+      margin: 15rem 5rem;
+      margin-right: 0;
+      background: #fff;
+      // outline: 3px solid #000;
+      // outline-offset: -2rem;
+      border-width: 5px;
+      border-style: solid;
+      // border-image: linear-gradient(to right bottom, #a68950, #fbf2a2) 250 1;
+      @include borderPurple;
+      box-shadow: 1rem 1rem 2rem $color-gray-extra-light;
+      border-radius: 1rem;
+    }
+  }
+
+  &__caption-container {
+    flex: 0 0 40%;
+    padding: 5rem 2rem;
+    margin-left: -9rem;
+    background: #fff;
+    border-width: 5px;
+    border-style: solid;
+    @include borderPurple;
+    box-shadow: 1rem 1rem 2rem $color-gray-extra-light;
+    border-radius: 1rem;
+    border-image-slice: 30;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__caption-title {
+    font-size: 5.5rem;
+    text-align: center;
+    @include textGold;
+  }
+  &__caption-text {
+    font-size: 2rem;
+    text-align: center;
+    color: $color-gray-dark;
+    font-weight: 300;
+    margin: 3rem 0;
+    padding: 0 5rem;
+  }
+  &__button {
+    text-decoration: none;
+    @include backgroundGold;
+    padding: 1rem 2rem;
+    box-shadow: inset 1px 0px 0 1px $color-icons-dark-bottom,
+      inset 0px 1px 0 1px $color-icons-dark-top,
+      inset -1px -1px 0 1px $color-icons-dark-top;
+    border-radius: 1rem;
+  }
+  &__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-gray-dark;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+}

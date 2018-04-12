@@ -1,0 +1,30 @@
+@mixin textGold {
+  background-image: linear-gradient(
+    to bottom right,
+    $color-icons-dark-top,
+    $color-icons-light,
+    $color-icons-dark-bottom
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin backgroundGold {
+  background-image: linear-gradient(
+    to bottom right,
+    $color-icons-dark-top,
+    $color-icons-light,
+    $color-icons-dark-bottom
+  );
+}
+
+@function borderGold($i1, $i2) {
+  @return linear-gradient(
+      to right bottom,
+      $color-icons-dark-top,
+      $color-icons-light,
+      $color-icons-dark-bottom
+    )
+    $i1 $i2;
+}

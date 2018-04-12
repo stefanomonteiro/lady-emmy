@@ -1,0 +1,119 @@
+.navbar {
+  margin: 2rem 0;
+  display: flex;
+  z-index: 99;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+
+  &--sticky {
+    position: sticky;
+    top: 0;
+    background: rgba($color: #fff, $alpha: 0.99);
+    padding: 0;
+    box-shadow: 0 3px 10px 1px rgba($color: $color-primary, $alpha: 0.3);
+  }
+
+  &__item {
+    padding: 0.5rem 2rem;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 300;
+    text-align: center;
+    color: $color-primary;
+    position: relative;
+    transition: all 0.3s;
+
+    &:hover {
+      @include textGold;
+      transition: color 0.3s;
+    }
+
+    &:first-child {
+      margin-left: auto;
+    }
+
+    &:nth-child(5) {
+      margin-right: 10rem;
+    } //Media query under 1200px => m-right:auto;
+
+    &:not(:nth-child(3))::before {
+      content: "";
+      width: 80%;
+      height: 1px;
+      background-image: linear-gradient(
+        to bottom right,
+        $color-icons-dark-top,
+        $color-icons-light,
+        $color-icons-dark-bottom
+      );
+
+      position: absolute;
+      bottom: -0.3rem;
+      left: 50%;
+      transform: translateX(-50%) scaleX(0);
+      transition: transform 0.5s;
+    }
+
+    &:hover::before {
+      transform: translateX(-50%) scaleX(1);
+    }
+
+    // &--sticky {
+    //   font-size: 1.6rem;
+    //   padding-bottom: 0;
+    // }
+  }
+
+  &__logo {
+    // transition: all 0.3s;
+
+    // &--sticky {
+    //   transform: scale(0.8);
+    // }
+  }
+
+  &__social-group {
+    margin-right: 4rem;
+  }
+  &__social-links {
+    text-decoration: none;
+    margin: 0 0.3rem;
+  }
+
+  &__social-icons {
+    fill: $color-primary;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 2rem;
+    padding: 1rem;
+    background: linear-gradient(
+      to bottom right,
+      $color-icons-dark-top,
+      $color-icons-light,
+      $color-icons-dark-bottom
+    );
+    position: relative;
+    box-shadow: inset 1px 0px 0 1px $color-icons-dark-bottom,
+      inset 0px 1px 0 1px $color-icons-dark-top,
+      inset -1px -1px 0 1px $color-icons-dark-top;
+
+    transition: all 0.3s;
+
+    &:hover {
+      fill: lighten($color: $color-primary, $amount: 90%);
+      box-shadow: inset 1px 0px 0 1px lighten($color-icons-dark-bottom, 20%),
+        inset 0px 1px 0 1px lighten($color-icons-dark-top, 20%),
+        inset -1px -1px 0 1px lighten($color-icons-dark-top, 20%);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+
+    // &--sticky {
+    //   height: 3.3rem;
+    //   width: 3.3rem;
+    // }
+  }
+}

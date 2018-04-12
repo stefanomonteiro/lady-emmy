@@ -1,0 +1,55 @@
+.newsletter {
+  //   background: $color-primary;
+  padding: 10rem 5rem;
+
+  &__container {
+    background: #fff;
+    padding: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__text {
+    text-align: center;
+    // flex: 0 0 50%;
+    padding: 0 2rem;
+  }
+  &__title {
+    font-size: 3.5rem;
+    margin: 1rem;
+    color: $color-primary;
+  }
+  &__p {
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+  &__form {
+    flex: 0 0 55%;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+  }
+  &__input {
+    font-size: 2rem;
+    color: $color-primary-light;
+    width: 70%;
+    height: 5rem;
+    outline: none;
+    padding-left: 2rem;
+    border: 3px solid $color-primary;
+
+    &::placeholder {
+      color: $color-gray-extra-light;
+    }
+  }
+  &__button {
+    font-size: 2rem;
+    font-weight: 200;
+    letter-spacing: 2px;
+    background: $color-primary;
+    color: #fff;
+    border: 3px solid $color-primary;
+    padding: 1rem 3rem;
+    margin-left: 1rem;
+  }
+}

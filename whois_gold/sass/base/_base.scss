@@ -22,6 +22,11 @@ $color-icons-light: #fbf2a2;
 $color-icons-dark-top: #a68950;
 $color-icons-dark-bottom: #b5a273;
 
+$color-gray-extra-light: rgba(#000, 0.2);
+$color-gray-light: rgba(#000, 0.4);
+$color-gray-medium: rgba(#000, 0.6);
+$color-gray-dark: rgba(#000, 0.8);
+
 //Reset
 *,
 *::before,
@@ -39,4 +44,10 @@ html {
 
 body {
   box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
 }

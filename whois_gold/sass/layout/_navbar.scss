@@ -1,7 +1,7 @@
 .navbar {
   margin: 2rem 0;
   display: flex;
-
+  z-index: 99;
   align-items: center;
   justify-content: center;
   transition: all 0.3s;
@@ -25,15 +25,7 @@
     transition: all 0.3s;
 
     &:hover {
-      background-image: linear-gradient(
-        to bottom right,
-        $color-icons-dark-top,
-        $color-icons-light,
-        $color-icons-dark-bottom
-      );
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+      @include textGold;
       transition: color 0.3s;
     }
 
