@@ -141,7 +141,7 @@ img {
     margin-left: 1rem; }
 
 .whois {
-  background-image: linear-gradient(to right bottom, rgba(166, 137, 80, 0.8), rgba(251, 242, 162, 0.8), rgba(181, 162, 115, 0.8)), url(../../img/background-nyc.jpg);
+  background-image: linear-gradient(to right bottom, rgba(166, 137, 80, 0.8), rgba(251, 242, 162, 0.8), rgba(181, 162, 115, 0.8)), url(../img/background-nyc.jpg);
   background-size: cover;
   background-position: bottom; }
   .whois__figure {
