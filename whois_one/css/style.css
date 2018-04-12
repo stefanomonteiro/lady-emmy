@@ -147,32 +147,64 @@ img {
   .whois__figure {
     display: flex;
     justify-content: center;
-    align-items: center; }
-  .whois__image {
+    align-items: center;
+    position: relative;
+    z-index: 1; }
+    .whois__figure::before {
+      content: "";
+      width: 80%;
+      height: 80%;
+      background: rgba(255, 255, 255, 0.6);
+      box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      border-width: 5px;
+      border-style: solid;
+      border-image: linear-gradient(to right bottom, #a68950, #fbf2a2, #b5a273) 1 1; }
+    .whois__figure::after {
+      content: "";
+      width: 75%;
+      height: 70%;
+      background: rgba(255, 255, 255, 0.6);
+      box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      border-width: 5px;
+      border-style: solid;
+      border-image: linear-gradient(to right bottom, #a68950, #fbf2a2, #b5a273) 1 1; }
+  .whois__container {
+    width: 70%;
+    margin: 18rem auto;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 7rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+    z-index: 3;
     border-width: 5px;
     border-style: solid;
     border-image: linear-gradient(to right bottom, #a68950, #fbf2a2, #b5a273) 1 1; }
-    .whois__image-container {
-      flex: 0 0 35%;
-      padding: 2rem;
-      margin: 15rem 5rem;
-      margin-right: 0;
-      background: #fff;
-      box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2); }
-  .whois__caption-container {
-    flex: 0 0 40%;
-    padding: 2rem;
-    margin-left: -9rem;
+  .whois__border {
     background: #fff;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2); }
-  .whois__caption-group {
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
     border-width: 5px;
     border-style: solid;
     border-image: linear-gradient(to right bottom, #a68950, #fbf2a2, #b5a273) 1 1;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 2rem; }
+    z-index: 4; }
+  .whois__image {
+    width: 40%;
+    padding: 1rem 0 0 1rem; }
+  .whois__caption-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
   .whois__caption-title {
     font-size: 5.5rem;
     text-align: center;

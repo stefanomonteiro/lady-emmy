@@ -1,0 +1,24 @@
+.header {
+  width: 100vw;
+  height: 100%;
+
+  &__banner {
+    &--one {
+    }
+    &--two {
+      display: none;
+      animation: bannerRotation 5s linear 3s infinite both;
+    }
+  }
+}
+
+@keyframes bannerRotation {
+  //   0%,
+  //   100% {
+  //     opacity: 1;
+  //   }
+  //   25%,
+  //   75% {
+  //     opacity: 0;
+  //   }
+}
