@@ -8,14 +8,12 @@ So far the website has 4 sections. Some minor details I will still be fixing lat
 
 4 - The Who Is section: I have created three different options. I will still add some subtle effects and some minor adjustments still needed.
 
-    4.1 - [All Gold](https://stefanomonteiro.github.io/lady-emmy/whois_gold/){:target="\_blank"}
+4.1 - [All Gold](https://stefanomonteiro.github.io/lady-emmy/whois_gold/){:target="\_blank"}
 
-    4.2 - [Purple Background](https://stefanomonteiro.github.io/lady-emmy/whois_purple/){:target="\_blank"}
+4.2 - [Purple Background](https://stefanomonteiro.github.io/lady-emmy/whois_purple/){:target="\_blank"}
 
-    4.3 - [One Frame](https://stefanomonteiro.github.io/lady-emmy/whois_one/){:target="\_blank"}
-        Two things I would like you opnion here:
-            - The 'piramid effect';
-            - Having the image and the text in the same frame.
+4.3 - [One Frame](https://stefanomonteiro.github.io/lady-emmy/whois_one/){:target="\_blank"}
+Two things I would like you opnion here: - The 'piramid effect' (needs some size adjustments still); - Having the image and the text in the same frame.
 
 ---
 
