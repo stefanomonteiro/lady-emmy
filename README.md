@@ -18,3 +18,9 @@ Two things I would like you opnion here: - The 'piramid effect' (needs some size
 ---
 
 <!-- [New LE](https://stefanomonteiro.github.io/lady-emmy/newLE/){:target="\_blank"} -->
+
+---
+
+## About Page
+
+[About Page](https://stefanomonteiro.github.io/lady-emmy/oldLE/){:target="\_blank"}
