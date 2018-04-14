@@ -38,6 +38,13 @@ $color-gray-dark: rgba(#000, 0.8);
 //Style
 body {
   padding: 5rem;
+
+  @media screen and (max-width: 900px) {
+    padding: 3rem;
+  }
+  @media screen and (max-width: 750px) {
+    padding: 1rem;
+  }
 }
 
 img {
@@ -54,20 +61,36 @@ img {
   font-size: 3rem;
   text-align: center;
   font-weight: normal;
+
+  @media screen and (max-width: 750px) {
+    font-size: 2.5rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 2rem;
+  }
+}
+
+//Responsiveness
+.tablets {
+  display: none;
+  @media screen and (max-width: 900px) {
+    display: unset;
+  }
 }
 
 //Browser Compability
 .chrome {
   display: none;
   @supports (shape-outside: polygon(0 0)) {
-    display: block;
+    display: unset;
   }
 }
 
 .firefox {
   display: none;
   @supports not (shape-outside: polygon(0 0)) {
-    display: block;
+    display: unset;
   }
 }
 
@@ -79,6 +102,13 @@ img {
   @include borderPurple;
   &__intro {
     padding: 2rem;
+
+    @media screen and (max-width: 900px) {
+      padding: 1rem;
+    }
+    @media screen and (max-width: 750px) {
+      padding: 0.5rem;
+    }
     &-head {
       display: flex;
       justify-content: center;
@@ -102,6 +132,9 @@ img {
     &-text {
       font-size: 1.3rem;
       text-align: justify;
+      @media screen and (max-width: 750px) {
+        font-size: 1rem;
+      }
     }
     &-link {
       text-decoration: none;
@@ -134,6 +167,17 @@ img {
       @supports not (shape-outside: polygon(0 0)) {
         margin: 0 -2rem 2rem 2rem;
       }
+
+      @media screen and (max-width: 900px) {
+        width: 60%;
+        margin: 6rem -1rem 2rem 6rem;
+      }
+      @media screen and (max-width: 750px) {
+        margin: 6rem -0.5rem 2rem 6rem;
+      }
+      @media screen and (max-width: 450px) {
+        margin: 3rem -0.5rem 1rem 3rem;
+      }
     }
 
     &-le-img {
@@ -142,14 +186,22 @@ img {
 
   &__extras {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 2rem;
     margin-top: 6rem;
+
+    @media screen and (max-width: 900px) {
+      margin: 3rem 0.5rem 0.5rem 0.5rem;
+    }
 
     &-figure {
       margin: 0;
       flex-basis: 40%;
       flex-shrink: 0;
+
+      @media screen and (max-width: 450px) {
+        flex-basis: 30%;
+      }
     }
     &-img {
       margin: 0 auto;
@@ -191,15 +243,29 @@ img {
 
   &__articles {
     margin-top: 5rem;
+    &--large-screens {
+      @media screen and (max-width: 900px) {
+        display: none;
+      }
+    }
 
     &-item {
       list-style: none;
       padding: 1rem;
+      font-size: 1.3rem;
+
+      @media screen and (max-width: 750px) {
+        padding: 0.5rem;
+        font-size: 1rem;
+      }
+      @media screen and (max-width: 450px) {
+        font-size: 0.8rem;
+      }
     }
 
     &-link {
       text-decoration: none;
-      font-size: 1.3rem;
+      font-size: inherit;
       color: $color-primary-extra-light;
       transition: color 0.5s;
 
