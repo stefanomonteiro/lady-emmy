@@ -66,13 +66,17 @@ img {
     font-size: 2.5rem;
     margin: 1rem 0;
   }
+  @media screen and (max-width: 1000px) {
+    font-size: 2rem;
+    // margin: 1rem 0;
+  }
 
   @media screen and (max-width: 750px) {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   @media screen and (max-width: 450px) {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 }
 
@@ -102,7 +106,7 @@ img {
 //About Page
 .about {
   font-family: "Roboto", sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-align: justify;
   border-width: 5px;
   border-style: solid;
@@ -165,6 +169,9 @@ img {
       //   font-size: 0.8rem;
       //   text-align: left;
       // }
+      @supports not (shape-outside: polygon(0 0)) {
+        text-align: left;
+      }
     }
     &-link {
       text-decoration: none;
@@ -194,10 +201,6 @@ img {
       float: right;
       margin: 8rem -2rem 2rem 8rem;
 
-      @supports not (shape-outside: polygon(0 0)) {
-        margin: 0 -2rem 2rem 2rem;
-      }
-
       @media screen and (max-width: 1200px) {
         width: 23rem;
         margin: 6rem -1rem 2rem 6rem;
@@ -212,6 +215,26 @@ img {
       @media screen and (max-width: 450px) {
         margin: 3rem -0.5rem 1rem 3rem;
       }
+
+      @supports not (shape-outside: polygon(0 0)) {
+        margin: -5rem -2rem 2rem 2rem;
+        width: 28rem;
+
+        @media screen and (max-width: 1200px) {
+          width: 23rem;
+          // margin: 6rem -1rem 2rem 6rem;
+        }
+        @media screen and (max-width: 900px) {
+          width: 60%;
+          margin: -2rem -2rem 2rem 2rem;
+        }
+        @media screen and (max-width: 750px) {
+          margin: -2rem -1rem 1rem 1rem;
+        }
+        @media screen and (max-width: 450px) {
+          margin: -2rem -1rem 1rem 1rem;
+        }
+      }
     }
 
     &-le-img {
@@ -222,10 +245,13 @@ img {
     display: flex;
     justify-content: space-around;
     margin: 2rem;
-    margin-top: 0rem;
+    margin-top: 1rem;
 
     @media screen and (max-width: 900px) {
       margin: 0 0.5rem 0.5rem 0.5rem;
+    }
+    @media screen and (min-width: 1350px) {
+      margin-top: 3rem;
     }
 
     &-figure {
@@ -295,6 +321,10 @@ img {
       font-size: inherit;
       color: $color-primary-extra-light;
       transition: color 0.5s;
+
+      @media screen and (max-width: 450px) {
+        font-size: 0.7rem;
+      }
 
       &::before {
         content: "\003e";

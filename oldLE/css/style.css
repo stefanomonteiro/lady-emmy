@@ -28,12 +28,15 @@ img {
     .secondary-heading {
       font-size: 2.5rem;
       margin: 1rem 0; } }
+  @media screen and (max-width: 1000px) {
+    .secondary-heading {
+      font-size: 2rem; } }
   @media screen and (max-width: 750px) {
     .secondary-heading {
-      font-size: 2rem; } }
+      font-size: 1.7rem; } }
   @media screen and (max-width: 450px) {
     .secondary-heading {
-      font-size: 2rem; } }
+      font-size: 1rem; } }
 
 .tablets {
   display: none; }
@@ -55,7 +58,7 @@ img {
 
 .about {
   font-family: "Roboto", sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-align: justify;
   border-width: 5px;
   border-style: solid;
@@ -91,6 +94,9 @@ img {
       margin-top: 3rem; }
     .about__intro-text {
       font-size: inherit; }
+      @supports not (shape-outside: polygon(0 0)) {
+        .about__intro-text {
+          text-align: left; } }
     .about__intro-link {
       text-decoration: none;
       font-size: inherit;
@@ -103,9 +109,6 @@ img {
       width: 30rem;
       float: right;
       margin: 8rem -2rem 2rem 8rem; }
-      @supports not (shape-outside: polygon(0 0)) {
-        .about__intro-le-figure {
-          margin: 0 -2rem 2rem 2rem; } }
       @media screen and (max-width: 1200px) {
         .about__intro-le-figure {
           width: 23rem;
@@ -120,14 +123,34 @@ img {
       @media screen and (max-width: 450px) {
         .about__intro-le-figure {
           margin: 3rem -0.5rem 1rem 3rem; } }
+      @supports not (shape-outside: polygon(0 0)) {
+        .about__intro-le-figure {
+          margin: -5rem -2rem 2rem 2rem;
+          width: 28rem; }
+          @media screen and (max-width: 1200px) {
+            .about__intro-le-figure {
+              width: 23rem; } }
+          @media screen and (max-width: 900px) {
+            .about__intro-le-figure {
+              width: 60%;
+              margin: -2rem -2rem 2rem 2rem; } }
+          @media screen and (max-width: 750px) {
+            .about__intro-le-figure {
+              margin: -2rem -1rem 1rem 1rem; } }
+          @media screen and (max-width: 450px) {
+            .about__intro-le-figure {
+              margin: -2rem -1rem 1rem 1rem; } } }
   .about__extras {
     display: flex;
     justify-content: space-around;
     margin: 2rem;
-    margin-top: 0rem; }
+    margin-top: 1rem; }
     @media screen and (max-width: 900px) {
       .about__extras {
         margin: 0 0.5rem 0.5rem 0.5rem; } }
+    @media screen and (min-width: 1350px) {
+      .about__extras {
+        margin-top: 3rem; } }
     .about__extras-figure {
       margin: 0;
       flex-basis: 30%;
@@ -173,6 +196,9 @@ img {
       font-size: inherit;
       color: #9c70bf;
       transition: color 0.5s; }
+      @media screen and (max-width: 450px) {
+        .about__articles-link {
+          font-size: 0.7rem; } }
       .about__articles-link::before {
         content: "\003e";
         color: #9c70bf;
