@@ -74,7 +74,8 @@ img {
       text-align: justify; }
       @media screen and (max-width: 750px) {
         .about__intro-text {
-          font-size: 1rem; } }
+          font-size: 1rem;
+          text-align: left; } }
     .about__intro-link {
       text-decoration: none;
       font-size: 1.3rem;
