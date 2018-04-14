@@ -1,7 +1,11 @@
 @font-face {
   font-family: "Savoye LET";
   src: url("../fonts/Savoye_LET.ttc");
-  src: url("../fonts/Savoye_LET.ttf"); }
+  src: url("../fonts/Savoye_LET.ttf");
+  src: url("../fonts/Savoye_LET.woff");
+  src: url("../fonts/Savoye_LET.svg");
+  src: url("../fonts/Savoye_LET.otf");
+  src: url("../fonts/Savoye_LET.eot"); }
 
 body {
   padding: 5rem; }
