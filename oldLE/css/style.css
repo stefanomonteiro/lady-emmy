@@ -18,6 +18,18 @@ img {
   text-align: center;
   font-weight: normal; }
 
+.chrome {
+  display: none; }
+  @supports (shape-outside: polygon(0 0)) {
+    .chrome {
+      display: block; } }
+
+.firefox {
+  display: none; }
+  @supports not (shape-outside: polygon(0 0)) {
+    .firefox {
+      display: block; } }
+
 .about {
   font-family: "Roboto", sans-serif;
   border-width: 5px;
@@ -48,6 +60,9 @@ img {
       width: 30rem;
       float: right;
       margin: 8rem -2rem 2rem 8rem; }
+      @supports not (shape-outside: polygon(0 0)) {
+        .about__intro-le-figure {
+          margin: 0 -2rem 2rem 2rem; } }
   .about__extras {
     display: flex;
     justify-content: space-between;

@@ -56,6 +56,21 @@ img {
   font-weight: normal;
 }
 
+//Browser Compability
+.chrome {
+  display: none;
+  @supports (shape-outside: polygon(0 0)) {
+    display: block;
+  }
+}
+
+.firefox {
+  display: none;
+  @supports not (shape-outside: polygon(0 0)) {
+    display: block;
+  }
+}
+
 //About Page
 .about {
   font-family: "Roboto", sans-serif;
@@ -115,6 +130,10 @@ img {
       width: 30rem;
       float: right;
       margin: 8rem -2rem 2rem 8rem;
+
+      @supports not (shape-outside: polygon(0 0)) {
+        margin: 0 -2rem 2rem 2rem;
+      }
     }
 
     &-le-img {
