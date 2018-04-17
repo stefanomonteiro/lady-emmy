@@ -268,8 +268,8 @@ img {
 
   &__asseenon {
     &-images {
-      // display: flex;
-      // flex-wrap: wrap;
+      display: flex;
+      flex-wrap: wrap;
       background: $color-gray-light;
       @supports not (display: flex) {
         background: $color-primary;
@@ -287,7 +287,7 @@ img {
     &-logos {
       height: 5rem;
       width: auto;
-      display: inline;
+      // display: inline;
       // @supports (display: grid) {
       //   width: 90%;
       //   grid-column: span 2;

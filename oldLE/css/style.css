@@ -173,14 +173,15 @@ img {
       justify-content: center;
       align-items: center; }
   .about__asseenon-images {
+    display: flex;
+    flex-wrap: wrap;
     background: rgba(0, 0, 0, 0.4); }
     @supports not (display: flex) {
       .about__asseenon-images {
         background: #662d91; } }
   .about__asseenon-logos {
     height: 5rem;
-    width: auto;
-    display: inline; }
+    width: auto; }
   .about__articles {
     margin-top: 1rem; }
     @media screen and (max-width: 900px) {
