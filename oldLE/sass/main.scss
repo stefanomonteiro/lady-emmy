@@ -270,6 +270,7 @@ img {
     &-images {
       // display: flex;
       // flex-wrap: wrap;
+      background: $color-gray-light;
       @supports not (display: flex) {
         background: $color-primary;
       }

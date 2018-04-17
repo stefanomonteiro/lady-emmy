@@ -172,9 +172,11 @@ img {
       flex-direction: column;
       justify-content: center;
       align-items: center; }
-  @supports not (display: flex) {
-    .about__asseenon-images {
-      background: #662d91; } }
+  .about__asseenon-images {
+    background: rgba(0, 0, 0, 0.4); }
+    @supports not (display: flex) {
+      .about__asseenon-images {
+        background: #662d91; } }
   .about__asseenon-logos {
     height: 5rem;
     width: auto;
