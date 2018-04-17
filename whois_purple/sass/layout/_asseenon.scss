@@ -1,0 +1,24 @@
+.asseenon {
+  margin: 5rem 10rem;
+  &__images {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(min-content, 1fr));
+    grid-template-rows: repeat(3, min-content);
+    grid-column-gap: 1rem;
+    align-items: center;
+    justify-items: center;
+  }
+  &__logos {
+    width: 40%;
+    grid-column: span 2;
+    &:nth-child(5) {
+      grid-column: 2 / span 2;
+    }
+
+    &:nth-child(1),
+    &:nth-child(5),
+    &:nth-child(7) {
+      width: 30%;
+    }
+  }
+}
