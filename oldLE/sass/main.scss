@@ -81,19 +81,19 @@ img {
 }
 
 //Browser Compability
-.chrome {
-  display: none;
-  @supports (shape-outside: polygon(0 0)) {
-    display: unset;
-  }
-}
+// .chrome {
+//   display: none;
+//   @supports (shape-outside: polygon(0 0)) {
+//     display: unset;
+//   }
+// }
 
-.firefox {
-  display: none;
-  @supports not (shape-outside: polygon(0 0)) {
-    display: unset;
-  }
-}
+// .firefox {
+//   display: none;
+//   @supports not (shape-outside: polygon(0 0)) {
+//     display: unset;
+//   }
+// }
 
 //About Page
 .about {
@@ -113,7 +113,7 @@ img {
   @media screen and (min-width: 1800px) {
     font-size: 1.8rem;
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1000px) {
     font-size: 1rem;
   }
   @media screen and (max-width: 900px) {
@@ -180,53 +180,48 @@ img {
     }
 
     &-le-figure {
-      shape-outside: polygon(
-        100% 16%,
-        62% 17%,
-        41% 26%,
-        31% 36%,
-        28% 45%,
-        27% 54%,
-        27% 67%,
-        20% 76%,
-        13% 90%,
-        13% 100%
-      );
-      width: 30rem;
       float: right;
-      margin: 8rem -2rem 2rem 8rem;
+      margin: -3rem -2rem 2rem 2rem;
+      width: 28rem;
 
       @media screen and (max-width: 1200px) {
         width: 23rem;
-        margin: 6rem -2rem 2rem 6rem;
       }
       @media screen and (max-width: 900px) {
         width: 60%;
-        margin: 6rem -2rem 2rem 6rem;
+        margin: -2rem -2rem 2rem 2rem;
       }
       @media screen and (max-width: 750px) {
-        margin: 6rem -1rem 2rem 6rem;
+        margin: -2rem -1rem 1rem 1rem;
       }
       @media screen and (max-width: 450px) {
-        margin: 3rem -1rem 1rem 3rem;
+        margin: -2rem -1rem 1rem 1rem;
       }
-
-      @supports not (shape-outside: polygon(0 0)) {
-        margin: -3rem -2rem 2rem 2rem;
-        width: 28rem;
+      @supports (shape-outside: polygon(0 0)) or (-webkit-shape-outside: polygon(0 0)) {
+        shape-outside: polygon(
+          100% -16%,
+          50% -3%,
+          48% 0%,
+          37% 10%,
+          32% 21%,
+          29% 39%,
+          28% 53%,
+          30% 59%,
+          23% 62%,
+          18% 72%,
+          15% 93%,
+          16% 100%
+        );
+        width: 30rem;
+        margin: -5rem -2rem 1rem 7rem;
 
         @media screen and (max-width: 1200px) {
           width: 23rem;
+          margin: -4rem -1rem 1rem 12%;
         }
         @media screen and (max-width: 900px) {
-          width: 60%;
-          margin: -2rem -2rem 2rem 2rem;
-        }
-        @media screen and (max-width: 750px) {
-          margin: -2rem -1rem 1rem 1rem;
-        }
-        @media screen and (max-width: 450px) {
-          margin: -2rem -1rem 1rem 1rem;
+          width: 57%;
+          margin: -3rem -1rem 1rem 12%;
         }
       }
     }
@@ -240,12 +235,11 @@ img {
     justify-content: space-around;
     margin: 2rem;
     margin-top: 1rem;
-
-    @media screen and (max-width: 900px) {
-      margin: 0 0.5rem 0.5rem 0.5rem;
-    }
     @media screen and (min-width: 1350px) {
       margin-top: 3rem;
+    }
+    @media screen and (max-width: 900px) {
+      margin: 1rem 0.5rem 0.5rem 0.5rem;
     }
 
     &-figure {
