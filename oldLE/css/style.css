@@ -172,7 +172,7 @@ img {
       flex-direction: column;
       justify-content: center;
       align-items: center; }
-  @supports not (display: grid) {
+  @supports not (display: flex) {
     .about__asseenon-images {
       background: #662d91; } }
   .about__asseenon-logos {

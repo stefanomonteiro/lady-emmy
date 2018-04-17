@@ -270,7 +270,7 @@ img {
     &-images {
       // display: flex;
       // flex-wrap: wrap;
-      @supports not (display: grid) {
+      @supports not (display: flex) {
         background: $color-primary;
       }
 
