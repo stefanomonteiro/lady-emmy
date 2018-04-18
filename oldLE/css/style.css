@@ -103,7 +103,8 @@ img {
       justify-content: center;
       align-items: center; }
     .about__intro-figure {
-      margin: 0; }
+      margin: 0;
+      width: 50%; }
     .about__intro-body {
       margin-top: 3rem; }
       @media screen and (max-width: 750px) {
@@ -115,6 +116,7 @@ img {
     .about__intro-text {
       font-size: inherit;
       hyphens: auto;
+      word-break: break-all;
       text-align: left; }
       @supports (shape-outside: polygon(0 0)) or (-webkit-shape-outside: polygon(0 0)) {
         .about__intro-text {
@@ -224,7 +226,10 @@ img {
           min-width: 100%; }
           @media screen and (max-width: 500px) {
             .about__extras-info {
-              margin-left: 1rem; } } }
+              margin-left: 1.5rem; } }
+          @media screen and (max-width: 400px) {
+            .about__extras-info {
+              margin-left: 3rem; } } }
   .about__asseenon-images {
     padding: 1rem 10%; }
     @media screen and (max-width: 900px) {

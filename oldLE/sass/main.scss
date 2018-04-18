@@ -123,6 +123,7 @@ img {
     }
     &-figure {
       margin: 0;
+      width: 50%;
     }
 
     &-body {
@@ -138,6 +139,7 @@ img {
     &-text {
       font-size: inherit;
       hyphens: auto;
+      word-break: break-all;
       text-align: left;
 
       @supports (shape-outside: polygon(0 0)) or (-webkit-shape-outside: polygon(0 0)) {
@@ -275,7 +277,10 @@ img {
         min-width: 100%;
 
         @media screen and (max-width: 500px) {
-          margin-left: 1rem;
+          margin-left: 1.5rem;
+        }
+        @media screen and (max-width: 400px) {
+          margin-left: 3rem;
         }
       }
     }
