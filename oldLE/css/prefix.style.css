@@ -433,7 +433,7 @@ img {
   }
 }
 .about__asseenon-images {
-  padding: 1rem 10%;
+  padding: 1rem 5%;
 }
 @media screen and (max-width: 900px) {
   .about__asseenon-images {

@@ -231,7 +231,7 @@ img {
             .about__extras-info {
               margin-left: 3rem; } } }
   .about__asseenon-images {
-    padding: 1rem 10%; }
+    padding: 1rem 5%; }
     @media screen and (max-width: 900px) {
       .about__asseenon-images {
         padding: 1rem 0; } }
