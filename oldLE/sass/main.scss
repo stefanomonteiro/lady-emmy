@@ -138,12 +138,12 @@ img {
 
     &-text {
       font-size: inherit;
-      hyphens: auto;
-      word-wrap: break-word;
       text-align: left;
 
       @supports (shape-outside: polygon(0 0)) or (-webkit-shape-outside: polygon(0 0)) {
         text-align: justify;
+        word-wrap: break-word;
+        hyphens: auto;
       }
     }
     &-link {

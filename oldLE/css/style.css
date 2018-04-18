@@ -115,12 +115,12 @@ img {
           margin-top: 1rem; } }
     .about__intro-text {
       font-size: inherit;
-      hyphens: auto;
-      word-wrap: break-word;
       text-align: left; }
       @supports (shape-outside: polygon(0 0)) or (-webkit-shape-outside: polygon(0 0)) {
         .about__intro-text {
-          text-align: justify; } }
+          text-align: justify;
+          word-wrap: break-word;
+          hyphens: auto; } }
     .about__intro-link {
       text-decoration: none;
       font-size: inherit;
