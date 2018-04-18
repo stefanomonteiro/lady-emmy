@@ -198,7 +198,7 @@ img {
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
-  word-break: break-all;
+  word-wrap: break-word;
   text-align: left;
 }
 @supports ((-webkit-shape-outside: polygon(0 0)) or (shape-outside: polygon(0 0))) or (-webkit-shape-outside: polygon(0 0)) {

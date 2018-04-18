@@ -139,7 +139,7 @@ img {
     &-text {
       font-size: inherit;
       hyphens: auto;
-      word-break: break-all;
+      word-wrap: break-word;
       text-align: left;
 
       @supports (shape-outside: polygon(0 0)) or (-webkit-shape-outside: polygon(0 0)) {
