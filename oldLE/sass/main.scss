@@ -96,23 +96,6 @@ img {
   font-size: 1.1rem;
   text-align: justify;
 
-  // @media screen and (min-width: 1450px) {
-  //   font-size: 1.5rem;
-  // }
-  // @media screen and (min-width: 1800px) {
-  //   font-size: 1.8rem;
-  // }
-  // @media screen and (max-width: 1000px) {
-  //   font-size: 1rem;
-  // }
-  // @media screen and (max-width: 900px) {
-  //   padding: 0.9rem;
-  // }
-  // @media screen and (max-width: 750px) {
-  //   padding: 0.5rem;
-  //   font-size: 0.8rem;
-  // }
-
   &__intro {
     padding: 2rem;
     padding-bottom: 1rem;
@@ -170,16 +153,7 @@ img {
       @media screen and (max-width: 800px) {
         width: 22rem;
       }
-      // @media screen and (max-width: 900px) {
-      //   width: 60%;
-      //   margin: -2rem -2rem 2rem 2rem;
-      // }
-      // @media screen and (max-width: 750px) {
-      //   margin: -2rem -1rem 1rem 1rem;
-      // }
-      // @media screen and (max-width: 450px) {
-      //   margin: -2rem -1rem 1rem 1rem;
-      // }
+
       @supports (shape-outside: polygon(0 0)) or (-webkit-shape-outside: polygon(0 0)) {
         shape-outside: polygon(
           100% -16%,
@@ -213,7 +187,11 @@ img {
   &__extras {
     margin: 0;
     margin-top: 0;
-    padding: 0 5rem;
+    padding: 0 3rem;
+
+    @media screen and (max-width: 1100px) {
+      padding: 0 1rem;
+    }
 
     @supports (display: grid) {
       display: flex;
@@ -252,23 +230,27 @@ img {
     &-img {
       width: 110%;
       @media screen and (max-width: 1100px) {
-        width: 130%;
+        width: 115%;
+        margin-left: 2rem;
       }
-      @media screen and (max-width: 750px) {
-        width: 160%;
-        margin-left: -3rem;
+      @media screen and (max-width: 450px) {
+        width: 220%;
+        margin-left: 0rem;
       }
 
       @supports (display: grid) {
         margin: 0 auto;
         width: 100%;
+
+        @media screen and (max-width: 1100px) {
+          width: 120%;
+        }
       }
     }
     &-info {
-      margin-top: 15%;
-      @media screen and (max-width: 750px) {
-        margin-top: 25%;
-        min-width: 130%;
+      margin-top: 7%;
+      @media screen and (max-width: 900px) {
+        margin-top: 18%;
       }
 
       @supports (display: grid) {
@@ -281,6 +263,9 @@ img {
         margin-top: 0;
         min-width: 100%;
 
+        @media screen and (min-width: 1100px) and (max-width: 1550px) {
+          margin-top: -4rem;
+        }
         @media screen and (max-width: 500px) {
           margin-left: 1.5rem;
         }
@@ -293,7 +278,7 @@ img {
 
   &__asseenon {
     &-images {
-      padding: 1rem 5%;
+      // padding: 1rem 5%;
 
       @media screen and (max-width: 900px) {
         padding: 1rem 0;
@@ -370,7 +355,9 @@ img {
       }
     }
     &-list {
-      padding-left: 15%;
+      @media screen and (max-width: 900px) {
+        padding: 0 15%;
+      }
     }
 
     &-item {
@@ -384,15 +371,9 @@ img {
       color: $color-primary-extra-light;
       transition: color 0.5s;
 
-      // @media screen and (max-width: 1200px) {
-      //   font-size: 1rem;
-      // }
-      // @media screen and (max-width: 950px) {
-      //   font-size: 0.9rem;
-      // }
-      // @media screen and (max-width: 600px) {
-      //   font-size: 0.7rem;
-      // }
+      @media screen and (max-width: 600px) {
+        font-size: 0.8rem;
+      }
 
       &::before {
         content: "\003e";
@@ -412,116 +393,3 @@ img {
     }
   }
 }
-
-// &__extras {
-//     display: flex;
-//     justify-content: space-around;
-//     margin: 2rem;
-//     margin-top: 1rem;
-//     @media screen and (min-width: 1350px) {
-//       margin-top: 3rem;
-//     }
-//     @media screen and (max-width: 900px) {
-//       margin: 1rem 0.5rem 0.5rem 0.5rem;
-//     }
-
-//     &-figure {
-//       margin: 0;
-//       flex-basis: 30%;
-//       flex-shrink: 0;
-//     }
-//     &-img {
-//       margin: 0 auto;
-//     }
-//     &-info {
-//       flex-shrink: 1;
-//       flex-basis: 60%;
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: center;
-//       align-items: center;
-//     }
-//   }
-
-//   &__asseenon {
-//     &-images {
-//       @supports (display: grid) {
-//         display: grid;
-//         grid-template-columns: repeat(8, minmax(min-content, 1fr));
-//         grid-template-rows: repeat(3, min-content);
-//         grid-column-gap: 1rem;
-//         align-items: center;
-//         justify-items: center;
-//       }
-//     }
-//     &-logos {
-//       height: auto;
-//       width: 20%;
-//       display: unset;
-//       margin: 0.3rem;
-
-//       @supports (display: grid) {
-//         width: 90%;
-//         grid-column: span 2;
-//         &:nth-child(5) {
-//           grid-column: 2 / span 2;
-//         }
-
-//         &:nth-child(1),
-//         &:nth-child(5),
-//         &:nth-child(7) {
-//           width: 70%;
-//         }
-//       }
-//     }
-//   }
-
-//   &__articles {
-//     margin-top: 1rem;
-//     &--large-screens {
-//       @media screen and (max-width: 900px) {
-//         display: none;
-//       }
-//     }
-//     &-list {
-//       margin: 0;
-//       @media screen and (max-width: 900px) and (min-width: 600px) {
-//         margin-left: 4rem;
-//       }
-//       @media screen and (max-width: 400px) {
-//         padding-left: 1rem;
-//       }
-//     }
-
-//     &-item {
-//       list-style: none;
-//       padding: 0.4rem 0;
-//     }
-
-//     &-link {
-//       text-decoration: none;
-//       font-size: inherit;
-//       color: $color-primary-extra-light;
-//       transition: color 0.5s;
-
-//       @media screen and (max-width: 450px) {
-//         font-size: 0.7rem;
-//       }
-
-//       &::before {
-//         content: "\003e";
-//         color: $color-primary-extra-light;
-//         display: inline-block; //Inline el do not transform.
-//         transform: translateX(-1rem);
-//         transition: transform 0.5s;
-//       }
-
-//       &:hover {
-//         color: $color-primary;
-//       }
-//       &:hover::before {
-//         color: $color-primary;
-//         transform: translateX(-0.5rem);
-//       }
-//     }
-//   }
