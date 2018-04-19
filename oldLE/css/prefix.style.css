@@ -393,14 +393,9 @@ img {
       margin-top: -5rem;
     }
   }
-  @media screen and (max-width: 500px) {
-    .about__extras-info {
-      margin-left: 1.5rem;
-    }
-  }
   @media screen and (max-width: 400px) {
     .about__extras-info {
-      margin-left: 3rem;
+      margin-left: -1rem;
     }
   }
 }

@@ -248,7 +248,7 @@ img {
       }
     }
     &-info {
-      margin-top: 7%;
+      margin-top: 5%;
       @media screen and (max-width: 900px) {
         margin-top: 18%;
       }
@@ -264,13 +264,11 @@ img {
         min-width: 100%;
 
         @media screen and (min-width: 1100px) and (max-width: 1550px) {
-          margin-top: -4rem;
+          margin-top: -5rem;
         }
-        @media screen and (max-width: 500px) {
-          margin-left: 1.5rem;
-        }
+
         @media screen and (max-width: 400px) {
-          margin-left: 3rem;
+          margin-left: -1rem;
         }
       }
     }
