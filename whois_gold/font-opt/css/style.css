@@ -1,0 +1,199 @@
+/* 
+    #662d91 Main Color
+    #d4af37 Text Color
+    #efca7c Social Icons Light
+    #c29e59 Social Icons Dark
+    #fff49d Logo Light
+    #9a7d47 Logo Dark
+*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  font-family: Roboto__subset, "Roboto", sans-serif; }
+
+body {
+  box-sizing: border-box; }
+
+img {
+  width: 100%;
+  height: auto;
+  display: block; }
+
+.navbar {
+  margin: 2rem 0;
+  display: flex;
+  z-index: 99;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s; }
+  .navbar--sticky {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.99);
+    padding: 0;
+    box-shadow: 0 3px 10px 1px rgba(102, 45, 145, 0.3); }
+  .navbar__item {
+    padding: 0.5rem 2rem;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 300;
+    text-align: center;
+    color: #662d91;
+    position: relative;
+    transition: all 0.3s; }
+    .navbar__item:hover {
+      background-image: linear-gradient(to bottom right, #a68950, #fbf2a2, #b5a273);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      transition: color 0.3s; }
+    .navbar__item:first-child {
+      margin-left: auto; }
+    .navbar__item:nth-child(5) {
+      margin-right: 10rem; }
+    .navbar__item:not(:nth-child(3))::before {
+      content: "";
+      width: 80%;
+      height: 1px;
+      background-image: linear-gradient(to bottom right, #a68950, #fbf2a2, #b5a273);
+      position: absolute;
+      bottom: -0.3rem;
+      left: 50%;
+      transform: translateX(-50%) scaleX(0);
+      transition: transform 0.5s; }
+    .navbar__item:hover::before {
+      transform: translateX(-50%) scaleX(1); }
+  .navbar__social-group {
+    margin-right: 4rem; }
+  .navbar__social-links {
+    text-decoration: none;
+    margin: 0 0.3rem; }
+  .navbar__social-icons {
+    fill: #662d91;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 2rem;
+    padding: 1rem;
+    background: linear-gradient(to bottom right, #a68950, #fbf2a2, #b5a273);
+    position: relative;
+    box-shadow: inset 1px 0px 0 1px #b5a273, inset 0px 1px 0 1px #a68950, inset -1px -1px 0 1px #a68950;
+    transition: all 0.3s; }
+    .navbar__social-icons:hover {
+      fill: white;
+      box-shadow: inset 1px 0px 0 1px #d8ceb6, inset 0px 1px 0 1px #cab792, inset -1px -1px 0 1px #cab792; }
+    .navbar__social-icons:active {
+      transform: scale(0.95); }
+
+.header {
+  width: 100vw;
+  height: 100%; }
+  .header__banner--two {
+    display: none;
+    animation: bannerRotation 5s linear 3s infinite both; }
+
+@keyframes bannerRotation {}.newsletter {
+  padding: 10rem 5rem; }
+  .newsletter__container {
+    background: #fff;
+    padding: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .newsletter__text {
+    text-align: center;
+    padding: 0 2rem; }
+  .newsletter__title {
+    font-size: 3.5rem;
+    margin: 1rem;
+    color: #662d91; }
+  .newsletter__p {
+    font-size: 2.5rem;
+    font-weight: 300; }
+  .newsletter__form {
+    flex: 0 0 55%;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center; }
+  .newsletter__input {
+    font-size: 2rem;
+    color: #7a46a2;
+    width: 70%;
+    height: 5rem;
+    outline: none;
+    padding-left: 2rem;
+    border: 3px solid #662d91; }
+    .newsletter__input::placeholder {
+      color: rgba(0, 0, 0, 0.2); }
+  .newsletter__button {
+    font-size: 2rem;
+    font-weight: 200;
+    letter-spacing: 2px;
+    background: #662d91;
+    color: #fff;
+    border: 3px solid #662d91;
+    padding: 1rem 3rem;
+    margin-left: 1rem; }
+
+.whois {
+  background-image: linear-gradient(to right bottom, rgba(166, 137, 80, 0.8), rgba(251, 242, 162, 0.8), rgba(181, 162, 115, 0.8)), url(../img/background-nyc.jpg);
+  background-size: cover;
+  background-position: bottom; }
+  .whois__figure {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .whois__image-container {
+    flex: 0 0 35%;
+    padding: 4rem 8rem 4rem 0;
+    margin: 15rem 5rem;
+    margin-right: 0;
+    background: #fff;
+    border-width: 11px;
+    border-style: solid;
+    border-image: linear-gradient(to right bottom, #a68950, #fbf2a2, #b5a273) 1 1;
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .whois__caption-container {
+    flex: 0 0 40%;
+    padding: 5rem 2rem;
+    margin-left: -9rem;
+    background: #fff;
+    border-width: 11px;
+    border-style: solid;
+    border-image: linear-gradient(to right bottom, #a68950, #fbf2a2, #b5a273) 1 1;
+    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .whois__caption-title {
+    font-size: 5.5rem;
+    text-align: center;
+    background-image: linear-gradient(to bottom right, #a68950, #fbf2a2, #b5a273);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; }
+  .whois__caption-text {
+    font-size: 2rem;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 300;
+    margin: 3rem 0;
+    padding: 0 5rem;
+    border-radius: 5px; }
+  .whois__button {
+    text-decoration: none;
+    background-image: linear-gradient(to bottom right, #a68950, #fbf2a2, #b5a273);
+    padding: 1rem 2rem; }
+  .whois__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 300;
+    font-size: 1.5rem;
+    border-radius: 5px; }
